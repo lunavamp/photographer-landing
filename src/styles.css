@@ -390,7 +390,7 @@ color: #797979;
         font-size: 14px;
         padding: 0 10px;
     }
-    .header-nav, .header-social-media {
+    .header-nav, .header-social-media, #nature-link {
         display: none;
     }
 
@@ -416,7 +416,7 @@ color: #797979;
     }
     .photo-genres-list {
         display: flex;
-        gap: 8px;
+        gap: 6px;
         justify-content: space-around;
     }
     .blog-grid {
