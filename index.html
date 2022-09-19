@@ -12,17 +12,19 @@
 <div class="main-container">
     <header class="header-container">
         <div class="menu-bar">
-            <iconify-icon icon="entypo:menu" style="color: #0e1112;" width="35" class="menu-icon"></iconify-icon>
+            <span></span>
         </div>
         <a href="#">
-            <img src="./img/logo.png" alt="logo" class="logo">
+            <img src="./img/logo.png" alt="logo" class="logo header-link" data-goto=".intro-section">
         </a>
-        <nav class="header-nav">
-            <a href="#" class="header-link" id="header-home">Home</a>
-            <a href="#" class="header-link">About Me</a>
-            <a href="#" class="header-link">Portfolio</a>
-            <a href="#" class="header-link">Blog</a>
-            <a href="#" class="header-link">Contacts</a>
+        <nav class="header-nav _active">
+            <ul class="header-list">
+                <li><a data-goto=".intro-section" href="#" class="header-link" id="header-home">Home</a></li>
+                <li><a data-goto=".about-me-section" href="#" class="header-link">About Me</a></li>
+                <li><a data-goto=".portfolio-section" href="#" class="header-link">Portfolio</a></li>
+                <li><a data-goto=".blog-section" href="#" class="header-link">Blog</a></li>
+                <li><a data-goto=".contacts-section" href="#" class="header-link">Contacts</a></li>
+            </ul>
         </nav>
         <div class="header-social-media">
             <a href="http://www.pinterest.com"><iconify-icon icon="fe:pinterest" ></iconify-icon></a>
@@ -31,14 +33,14 @@
         </div>
     </header>
 </div>
-<section class="intro">
+<section class="intro-section">
             <div class="billboard">
                 <h1 class="billboard-text">Photographer & Film Maker</h1>
             <h3 class="title-text billboard-title-text">Los Angeles, USA</h3>
             <button class="btn">HIRE ME</button>
             </div>
 </section>
-<section>
+<section class="about-me-section">
     <div class="about-me">
             <div class="about-me-photo">
                 <img src="./img/about-me.jpg" alt="photographer" class="photographer-photo">
@@ -53,7 +55,7 @@
             </div>
           </div>
 </section>
-<section>
+<section class="portfolio-section">
     <div class="portfolio">
         <div class="portfolio-items">
             <h2 class="main-title-text"> <span class="decor">Po</span>rtfolio</h2>
@@ -95,7 +97,7 @@
         </div>
     </div>
 </section>
-<section>
+<section class="blog-section">
     <div class="container">
         <h2 class="main-title-text"><span class="decor" >Bl</span>og</h2>
             <div class="blog-grid">
@@ -155,7 +157,7 @@
           </div>
     </div>
 </section>
-<section>
+<section class="contacts-section">
     <div class="container directions-container">
         <div class="directions">
             <h3 class="title-text"><span class="decor" >Get In</span> Touch</h2>
@@ -188,5 +190,6 @@
         </p>
     </div>
 </footer>
+<script src="src/app.js"></script>
 </body>
 </html>
