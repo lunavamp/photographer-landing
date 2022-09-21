@@ -15,15 +15,15 @@
             <span></span>
         </div>
         <a href="#">
-            <img src="./img/logo.png" alt="logo" class="logo header-link" data-goto=".intro-section">
+            <img src="./img/logo.png" alt="logo" class="logo menu-item" data-goto=".intro-section">
         </a>
         <nav class="header-nav _active">
-            <ul class="header-list">
-                <li><a data-goto=".intro-section" href="#" class="header-link" id="header-home">Home</a></li>
-                <li><a data-goto=".about-me-section" href="#" class="header-link">About Me</a></li>
-                <li><a data-goto=".portfolio-section" href="#" class="header-link">Portfolio</a></li>
-                <li><a data-goto=".blog-section" href="#" class="header-link">Blog</a></li>
-                <li><a data-goto=".contacts-section" href="#" class="header-link">Contacts</a></li>
+            <ul class="header-menu">
+                <li><a data-goto=".intro-section" href="#" class="menu-item" id="header-home">Home</a></li>
+                <li><a data-goto=".about-me-section" href="#" class="menu-item">About Me</a></li>
+                <li><a data-goto=".portfolio-section" href="#" class="menu-item">Portfolio</a></li>
+                <li><a data-goto=".blog-section" href="#" class="menu-item">Blog</a></li>
+                <li><a data-goto=".contacts-section" href="#" class="menu-item">Contacts</a></li>
             </ul>
         </nav>
         <div class="header-social-media">
@@ -61,9 +61,9 @@
             <h2 class="main-title-text"> <span class="decor">Po</span>rtfolio</h2>
             <div class="photo-genres">
                 <nav class="nav photo-genres-list">
-                    <a href="#" class="nav-link" id="nav-link">All</a>
-                    <a href="#" class="nav-link">Fashion</a>
-                    <a href="#" class="nav-link">Portrait</a>
+                    <a href="javascript:imageAll()" class="nav-link" id="nav-link">All</a>
+                    <a href="javascript:imageFashion()"  class="nav-link" >Fashion</a>
+                    <a href="javascript:imagePortrait()" class="nav-link">Portrait</a>
                     <a href="#" class="nav-link">Urban</a>
                     <a href="#" class="nav-link">Events</a>
                     <a href="#" class="nav-link" id="nature-link">Nature</a>
@@ -73,25 +73,25 @@
         <div>
             <div class="block_img">
                 <div class="img_box box1">
-                    <img src="./img/photo1.jpg" alt="photo">
+                    <img src="./portfolio/photo-1.jpg" alt="photo" id="img1">
                 </div>
                 <div class="img_box box2">
-                    <img src="./img/photo2.jpg" alt="photo">
+                    <img src="./portfolio/photo-2.jpg" alt="photo" id="img2">
                 </div>
                 <div class="img_box box3">
-                    <img src="./img/photo3.jpg" alt="photo">
+                    <img src="./portfolio/photo-3.jpg" alt="photo" id="img3">
                 </div>
                 <div class="img_box box4">
-                    <img src="./img/photo4.jpg" alt="photo">
+                    <img src="./portfolio/photo-4.jpg" alt="photo" id="img4">
                 </div>
                 <div class="img_box box5">
-                    <img src="./img/photo5.jpg" alt="photo">
+                    <img src="./portfolio/photo-5.jpg" alt="photo" id="img5">
                 </div>
                 <div class="img_box box6">
-                    <img src="./img/photo6.jpg" alt="photo">
+                    <img src="./portfolio/photo-6.jpg" alt="photo" id="img6">
                 </div>
                 <div class="img_box box7">
-                    <img src="./img/photo7.jpg" alt="photo">
+                    <img src="./portfolio/photo-7.jpg" alt="photo" id="img7">
                 </div>
             </div>
         </div>
@@ -190,6 +190,8 @@
         </p>
     </div>
 </footer>
+<script src="jquery/jquery-3.6.1.min.js"></script>
 <script src="src/app.js"></script>
+<script src="src/photochange.js"></script>
 </body>
 </html>

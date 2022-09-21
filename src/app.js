@@ -1,50 +1,21 @@
-const isMobile = {
-    Android: function () {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function () {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function () {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function () {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function () {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function () {
-        return (
-                isMobile.Android()
-                || isMobile.BlackBerry()
-                || isMobile.iOS()
-                || isMobile.Opera()
-                || isMobile.Windows()
-                );
-    }
-};
-
-if (isMobile.any()) {
-    document.body.classList.add('_touch');
-} else {
-    document.body.classList.add('_pc');
-}
-
-//click on menu
-
-const menuBar = document.querySelector('.menu-bar');
-const headerNav = document.querySelector('.header-nav');
-if (menuBar){
-    menuBar.addEventListener("click", function(e){
-        document.body.classList.toggle('_lock');
-        menuBar.classList.toggle('_active');
-        headerNav.classList.toggle('_active');
+$(document).ready(function(){
+    $('.menu-bar').click(function() {
+        $('.menu-bar').toggleClass('open-menu');
+        $('.header-nav').toggleClass('open-menu');
     });
-}
+});
+
+$(document).ready(function() {
+    $('.menu-bar').click(function(event){
+        $('.menu-bar, .header-menu').toggleClass('active');
+        $('body').toggleClass('fixed-page');
+    });
+});
 
 //header menu navigation
-const menuLinks = document.querySelectorAll('.header-link[data-goto]');
+const menuBar = document.querySelector('.menu-bar');
+const headerNav = document.querySelector('.header-nav');
+const menuLinks = document.querySelectorAll('.menu-item[data-goto]');
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener("click", onMenuLinkClick);
