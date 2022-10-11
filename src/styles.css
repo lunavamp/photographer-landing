@@ -30,7 +30,7 @@ ul {
 }
 
 .logo {
-    width: 163px;
+    height: 36px;
 }
 
 .header-nav {
@@ -268,7 +268,7 @@ color: #797979;
 
 .contact-form {
     margin: 0 auto;
-    width: 1120px;
+    max-width: 1120px;
     height: 70%;
 }
 
@@ -395,11 +395,6 @@ color: #797979;
     }
     .contact-me-photo {
         width: 420px;
-    }
-    .contact-form {
-        margin: 0 auto;
-        max-width: 1120px;
-        height: 70%;
     }
 }
 

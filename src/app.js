@@ -42,3 +42,6 @@ if (menuLinks.length > 0) {
     }
 }
 
+// contact form
+
+const form = new ItcSubmitForm('form');
