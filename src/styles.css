@@ -171,6 +171,14 @@ margin-bottom: 100px;
 
 .portfolio-items {
     padding: 20px 17px 70px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.photo-genres-list {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-start;
 }
 
 .block_img {
@@ -181,11 +189,15 @@ margin-bottom: 100px;
     "box4 box2 box7"
     "box5 box6 box7"
     "box5 box6 box7";
+    gap: 20px;
+    max-width: 1100px;
+    max-height: 1300px;
 }
 .img_box img{
-    height: 95%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
 }
+
 .box1 {
     grid-area: box1;
 }
@@ -206,17 +218,6 @@ margin-bottom: 100px;
 }
 .box7 {
     grid-area: box7;
-}
-
-.portfolio-items{
-    margin: 0 auto;
-    max-width: 1000px;
-}
-
-.photo-genres-list {
-    display: flex;
-    gap: 25px;
-    justify-content: flex-start;
 }
 
 a {
@@ -503,6 +504,9 @@ color: #797979;
         display: flex;
         gap: 6px;
         justify-content: space-around;
+    }
+    .block_img {
+        gap: 8px;
     }
     .blog-grid {
         grid-gap: 10px;
