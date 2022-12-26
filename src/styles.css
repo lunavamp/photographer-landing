@@ -382,6 +382,18 @@ color: #797979;
     body {
         background-image: none;
     }
+
+    .fix {
+        display: none;
+    }
+
+    .header-social-media {
+        padding: 0 10px;
+        position: absolute;
+        top: 72px;
+        right: 30px;
+    }
+
     .container, .portfolio-section {
         padding: 0 15px;
     }
@@ -394,8 +406,12 @@ color: #797979;
     .intro-section {
         display: none;
     }
+    .contact-form-items {
+        padding: 0 0 0 15px;
+    }
     .contact-me-photo {
-        width: 420px;
+        width: 360px;
+        right: 0;
     }
 }
 
