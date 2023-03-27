@@ -21,5 +21,6 @@ menuLinks.forEach((link) => {
     });
 
     headerNav.classList.remove("_active");
+    burgerIcon.classList.remove("_active");
   });
 });
