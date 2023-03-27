@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Playfair+Display:wght@400;700&display=swap");
-
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: "Mulish", sans-serif, "Playfair Display", serif;
   font-style: normal;
   font-size: 16px;
   color: #0e1112;
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 700px;
+  background-position: right 250px top 0;
 }
 
 body._lock {
@@ -17,26 +24,39 @@ ul {
   list-style-type: none;
 }
 
+/* header */
+
 .menu-bar {
   display: none;
 }
 
-.header-container {
+header {
   width: 100%;
-  padding: 60px 88px 0 65px;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  box-sizing: border-box;
+  grid-template-columns: 3fr 2fr 1fr;
+  align-items: center;
+  padding: 63px 88px 0 65px;
 }
 
-.logo {
+.header-logo {
   height: 36px;
 }
 
-.header-nav {
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-social-media {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  gap: 16px;
+}
+
+iconify-icon,
+#header-home,
+#nav-link {
+  color: #0e1112;
 }
 
 .menu-item {
@@ -50,25 +70,7 @@ ul {
   font-weight: 400;
 }
 
-#header-home {
-  color: #0e1112;
-}
-
-.header-social-media {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 11px;
-}
-
-.social-icon {
-  width: 16px;
-  height: 16px;
-}
-
-iconify-icon {
-  color: #0e1112;
-}
+/* titles font */
 
 h1,
 h2,
@@ -80,14 +82,15 @@ h3 {
 }
 
 .main-title-text {
-  font-size: 44px;
-  line-height: 200%;
+  font-size: 56px;
+  line-height: 142%;
 }
 
 .title-text {
   font-weight: 400;
-  font-size: 26px;
+  font-size: 32px;
   letter-spacing: -0.02em;
+  margin-bottom: 29px;
 }
 
 p {
@@ -102,6 +105,7 @@ p {
   text-decoration: underline;
 }
 
+/* buttons */
 .btn {
   height: 66px;
   background-color: #0e1112;
@@ -115,8 +119,7 @@ p {
   border: none;
   border-radius: 0;
   width: 168px;
-  margin-top: 35px;
-  margin-bottom: 100px;
+  margin-top: 60px;
   cursor: pointer;
 }
 
@@ -129,57 +132,82 @@ p {
   width: 240px;
 }
 
-.billboard {
-  margin: 0 auto;
-  max-width: 1000px;
-  height: 700px;
+/* banner */
+
+.banner {
+  margin: 250px auto 0;
+  max-width: 1346px;
+  height: 840px;
 }
 
-.billboard-text {
-  max-width: 500px;
-  margin-top: 150px;
-  font-size: 77px;
-  letter-spacing: -0.05em;
+.banner-text {
+  max-width: 700px;
+  font-weight: 700;
+  font-size: 108px;
 }
+
+.banner-title-text {
+  font-weight: 400;
+  font-size: 36px;
+  margin-top: 18px;
+}
+
+/* about section */
 
 .about-me {
   margin: 0 auto;
-  padding: 0 15px;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
-  max-width: 1100px;
+  gap: 25px;
+  max-width: 1500px;
+  height: 866px;
+  position: relative;
 }
 
 .about-me-photo {
-  max-width: 550px;
+  margin-left: 100px;
 }
 
 .about-me-description {
+  margin: auto;
+}
+
+.about-me-text {
   max-width: 430px;
+  margin-top: 40px;
+}
+
+.arrow {
+  position: absolute;
+  max-width: 2px;
+  bottom: 0;
 }
 
 .photographer-photo {
   width: 100%;
-  max-width: 600px;
-  max-height: 720px;
+  max-width: 689px;
+  max-height: 850px;
 }
+/* portfolio section */
 
-.portfolio-section {
+.portfolio-content {
   margin: 0 auto;
-  max-width: 1150px;
+  max-width: 1510px;
+}
+.portfolio-text {
+  margin: 67px 0;
 }
 
 .portfolio-items {
-  padding: 20px 17px 70px;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .photo-genres-list {
   display: flex;
   gap: 25px;
   justify-content: flex-start;
+  margin-bottom: 70px;
 }
 
 .block_img {
@@ -188,11 +216,12 @@ p {
     "box1 box2 box3"
     "box4 box2 box3"
     "box4 box2 box7"
+    "box4 box6 box7"
     "box5 box6 box7"
     "box5 box6 box7";
-  gap: 20px;
-  max-width: 1100px;
-  max-height: 1300px;
+  gap: 34px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .img_box img {
@@ -236,20 +265,27 @@ a {
   font-weight: 400;
 }
 
-#nav-link {
-  color: #0e1112;
-}
-
-.container {
+/* blog section */
+.blog-container {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
+  margin-bottom: 138px;
 }
 
 .blog-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
+  row-gap: 63px;
+  column-gap: 150px;
   margin-bottom: 30px;
+}
+
+.blog-main-title {
+  margin: 114px 0 82px;
+}
+
+.blog-title {
+  margin: 12px 0;
 }
 
 .date {
@@ -260,6 +296,8 @@ a {
   text-transform: uppercase;
   color: #797979;
 }
+
+/* contact me section*/
 
 .contact-me {
   margin: 30px 0;
@@ -281,9 +319,14 @@ a {
 
 .contact-me-photo {
   position: absolute;
-  right: 50px;
+  right: 40px;
   bottom: 0;
-  max-width: 525px;
+  max-width: 653px;
+  width: 100%;
+}
+
+.btn-contact-form {
+  margin-bottom: 180px;
 }
 
 .md-form {
@@ -306,7 +349,7 @@ a {
 }
 
 .textarea {
-  width: 96%;
+  width: 100%;
   min-height: 50px;
   margin-top: 10px;
   resize: none;
@@ -327,27 +370,21 @@ textarea {
   padding: 15px;
 }
 
+/* contacts */
+
+.main-title-contacts {
+  margin-top: 150px;
+}
+
 .directions-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  max-width: 1360px;
+  margin: 140px auto 90px;
 }
 
 .directions {
   max-width: 277px;
-}
-
-.contact-info {
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.adress {
-  color: #696c6d;
-}
-.directions {
-  margin: 90px 0 70px;
 }
 
 .directions-social-media {
@@ -358,79 +395,73 @@ textarea {
 .copyright {
   text-align: center;
   color: #abb1b4;
-  margin: 40px;
-}
-
-@media screen and (min-device-width: 481px) {
-  body {
-    background-image: url("../img/intro-bg.jpg");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 600px;
-    background-position: right 250px top 0;
-  }
-  .header-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-  }
+  margin: 50px;
 }
 
 @media screen and (max-width: 1100px) {
   body {
     background-image: none;
   }
+  header {
+    grid-template-columns: 1fr 2fr;
+  }
 
-  .fix {
+  .header-social-media,
+  .intro-section,
+  .arrow {
     display: none;
   }
-
-  .header-social-media {
-    padding: 0 10px;
-    position: absolute;
-    top: 72px;
-    right: 30px;
-  }
-
-  .container,
-  .portfolio-section {
-    padding: 0 15px;
-  }
-  .main-container {
-    max-width: 800px;
-  }
-  .header-container {
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-  .intro-section {
-    display: none;
-  }
-  .contact-form-items {
-    padding: 0;
+  .about-me-photo {
+    margin-left: 0;
   }
   .contact-me-photo {
-    width: 360px;
+    max-width: 370px;
     right: 0;
+  }
+  .about-me {
+    height: auto;
+  }
+  .about-me,
+  .portfolio-content,
+  .contact-form-items,
+  .blog-container {
+    margin: 20px 25px;
+  }
+  .blog-main-title,
+  .main-title-contacts,
+  .portfolio-text {
+    margin: 60px 0 40px;
+  }
+
+  .contacts {
+    max-width: 500px;
+  }
+  .credentials {
+    flex-direction: column;
+  }
+
+  .btn-contact-form {
+    margin-bottom: 80px;
   }
 }
 
 @media screen and (max-width: 800px) {
   body {
     font-size: 14px;
-    padding: 0 10px;
   }
+
+  header {
+    padding: 10px 0;
+  }
+
   .header-social-media,
-  #nature-link,
-  #header-home {
+  #header-home,
+  .contact-me-photo {
     display: none;
   }
 
   .container,
-  .portfolio-section {
+  .portfolio-content {
     padding: 0;
   }
 
@@ -509,8 +540,8 @@ textarea {
   .header-menu > li:last-child {
     margin-bottom: 0;
   }
-  .header-container {
-    grid-template-columns: 1fr 2fr 1fr;
+  header {
+    grid-template-columns: 1fr 2fr;
     padding: 40px 0;
   }
   .fixed-page {
@@ -524,7 +555,6 @@ textarea {
     font-size: 28px;
   }
   .photo-genres-list {
-    display: flex;
     gap: 6px;
     justify-content: space-around;
   }
@@ -532,11 +562,8 @@ textarea {
     gap: 8px;
   }
   .blog-grid {
+    grid-template-columns: 1fr;
     grid-gap: 10px;
-  }
-
-  .contact-me-photo {
-    display: none;
   }
 
   .contacts {
@@ -546,7 +573,10 @@ textarea {
   .directions-container {
     flex-direction: column;
   }
-  .directions,
+  .directions-container {
+    margin: 20px 10px;
+  }
+
   .copyright,
   .btn {
     margin: 0;

@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photographer Website</title>
+    <link type="image/png" rel="icon" href="./img/favicon.png" />
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.2/iconify-icon.min.js"></script>
   </head>
   <body>
-    <div class="main-container">
-      <header class="header-container">
-        <div class="menu-bar">
-          <span></span>
-        </div>
+    <header>
+      <div class="menu-bar">
+        <span></span>
+      </div>
+      <div class="header-logo">
         <a href="#">
           <img
             src="./img/logo.svg"
@@ -22,59 +23,68 @@
             data-goto=".intro-section"
           />
         </a>
-        <nav class="header-nav _active">
-          <ul class="header-menu">
-            <li>
-              <a
-                data-goto=".header-menu"
-                href="#"
-                class="menu-item"
-                id="header-home"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a data-goto=".about-me-section" href="#" class="menu-item"
-                >About <span class="fix">Me</span></a
-              >
-            </li>
-            <li>
-              <a data-goto=".photo-genres-list" href="#" class="menu-item"
-                >Portfolio</a
-              >
-            </li>
-            <li>
-              <a data-goto=".blog-grid" href="#" class="menu-item">Blog</a>
-            </li>
-            <li>
-              <a data-goto=".contact-form" href="#" class="menu-item"
-                >Contacts</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <div class="header-social-media">
-          <a href="http://www.pinterest.com"
-            ><iconify-icon icon="fe:pinterest"></iconify-icon
-          ></a>
-          <a href="http://www.instagram.com"
-            ><iconify-icon icon="icomoon-free:instagram"></iconify-icon
-          ></a>
-          <a href="http://www.kavyar.com"
-            ><img src="img/kavyar.png" class="social-icon"
-          /></a>
-        </div>
-      </header>
-    </div>
+      </div>
+      <nav class="header-nav _active">
+        <ul class="header-menu">
+          <li>
+            <a
+              data-goto=".header-menu"
+              href="#"
+              class="menu-item"
+              id="header-home"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a data-goto=".about-me-section" href="#" class="menu-item"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a data-goto=".photo-genres-list" href="#" class="menu-item"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a data-goto=".blog-section" href="#" class="menu-item">Blog</a>
+          </li>
+          <li>
+            <a data-goto=".contact-me-photo" href="#" class="menu-item"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="header-social-media">
+        <a href="https://www.facebook.com"
+          ><iconify-icon icon="ri:facebook-fill"></iconify-icon
+        ></a>
+        <a href="https://twitter.com"
+          ><iconify-icon icon="ri:twitter-fill"></iconify-icon
+        ></a>
+        <a href="http://www.pinterest.com"
+          ><iconify-icon icon="fe:pinterest"></iconify-icon
+        ></a>
+        <a href="http://www.instagram.com"
+          ><iconify-icon icon="icomoon-free:instagram"></iconify-icon
+        ></a>
+        <a href="https://www.youtube.com"
+          ><iconify-icon icon="uil:youtube"></iconify-icon
+        ></a>
+      </div>
+    </header>
     <section class="intro-section">
-      <div class="billboard">
-        <h1 class="billboard-text">Photographer & Film Maker</h1>
-        <h3 class="title-text billboard-title-text">Los Angeles, USA</h3>
+      <div class="banner">
+        <h1 class="banner-text">Photographer & Film Maker</h1>
+        <h3 class="title-text banner-title-text">Los Angeles, USA</h3>
         <button class="btn">HIRE ME</button>
       </div>
     </section>
     <section class="about-me-section">
       <div class="about-me">
+        <div class="arrow">
+          <img src="./img/arrow-1.svg" alt="" />
+        </div>
         <div class="about-me-photo">
           <img
             src="./img/about-me.jpg"
@@ -82,14 +92,14 @@
             class="photographer-photo"
           />
         </div>
-        <div class="about-me-text">
+        <div class="about-me-description">
           <h2 class="main-title-text"><span class="decor">Ab</span>out me</h2>
-          <p class="about-me-description">
+          <p class="about-me-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus
             scelerisque viverra at id aenean scelerisque. Nec eget condimentum
             etiam leo.
-            <br />
-            <br />
+          </p>
+          <p class="about-me-text">
             Morbi at eget fusce feugiat volutpat et volutpat malesuada. At
             suspendisse nisi, quam neque in leo sollicitudin.
           </p>
@@ -98,9 +108,11 @@
       </div>
     </section>
     <section class="portfolio-section">
-      <div class="portfolio">
+      <div class="porfolio-content">
         <div class="portfolio-items">
-          <h2 class="main-title-text"><span class="decor">Po</span>rtfolio</h2>
+          <h2 class="main-title-text portfolio-text">
+            <span class="decor">Po</span>rtfolio
+          </h2>
           <div class="photo-genres">
             <nav class="nav photo-genres-list">
               <a href="javascript:imageAll()" class="nav-link" id="nav-link"
@@ -110,71 +122,77 @@
               <a href="javascript:imagePortrait()" class="nav-link">Portrait</a>
               <a href="#" class="nav-link">Urban</a>
               <a href="#" class="nav-link">Events</a>
-              <a href="#" class="nav-link" id="nature-link">Nature</a>
+              <a href="#" class="nav-link">Nature</a>
             </nav>
           </div>
         </div>
-        <div>
-          <div class="block_img">
-            <div class="img_box box1">
-              <img src="./img/portfolio/photo-1.jpg" alt="photo" id="img1" />
-            </div>
-            <div class="img_box box2">
-              <img src="./img/portfolio/photo-2.jpg" alt="photo" id="img2" />
-            </div>
-            <div class="img_box box3">
-              <img src="./img/portfolio/photo-3.jpg" alt="photo" id="img3" />
-            </div>
-            <div class="img_box box4">
-              <img src="./img/portfolio/photo-4.jpg" alt="photo" id="img4" />
-            </div>
-            <div class="img_box box5">
-              <img src="./img/portfolio/photo-5.jpg" alt="photo" id="img5" />
-            </div>
-            <div class="img_box box6">
-              <img src="./img/portfolio/photo-6.jpg" alt="photo" id="img6" />
-            </div>
-            <div class="img_box box7">
-              <img src="./img/portfolio/photo-7.jpg" alt="photo" id="img7" />
-            </div>
+        <div class="block_img">
+          <div class="img_box box1">
+            <img src="./img/portfolio/photo-1.jpg" alt="photo" id="img1" />
+          </div>
+          <div class="img_box box2">
+            <img src="./img/portfolio/photo-2.jpg" alt="photo" id="img2" />
+          </div>
+          <div class="img_box box3">
+            <img src="./img/portfolio/photo-3.jpg" alt="photo" id="img3" />
+          </div>
+          <div class="img_box box4">
+            <img src="./img/portfolio/photo-4.jpg" alt="photo" id="img4" />
+          </div>
+          <div class="img_box box5">
+            <img src="./img/portfolio/photo-5.jpg" alt="photo" id="img5" />
+          </div>
+          <div class="img_box box6">
+            <img src="./img/portfolio/photo-6.jpg" alt="photo" id="img6" />
+          </div>
+          <div class="img_box box7">
+            <img src="./img/portfolio/photo-7.jpg" alt="photo" id="img7" />
           </div>
         </div>
       </div>
     </section>
     <section class="blog-section">
-      <div class="container">
-        <h2 class="main-title-text"><span class="decor">Bl</span>og</h2>
+      <div class="blog-container">
+        <h2 class="main-title-text blog-main-title">
+          <span class="decor">Bl</span>og
+        </h2>
         <div class="blog-grid">
           <div class="post">
             <p class="date">3.11.2011 · TRENDS</p>
-            <h3 class="title-text">why the trend of minimalism?</h3>
+            <h3 class="title-text blog-title">why the trend of minimalism?</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              quibusdam aliquid odit!
+              quibusdam aliquid odit! Voluptatibus quod aliquid.
             </p>
           </div>
           <div class="post">
             <p class="date">3.11.2011 · TRENDS</p>
-            <h3 class="title-text">simple tips & tricks of photography</h3>
+            <h3 class="title-text blog-title">
+              simple tips & tricks of photography
+            </h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              quibusdam aliquid odit!
+              quibusdam aliquid odit! Voluptatibus quod aliquid.
             </p>
           </div>
           <div class="post">
             <p class="date">3.11.2011 · COLLECTION</p>
-            <h3 class="title-text">world’s top photograph collections</h3>
+            <h3 class="title-text blog-title">
+              world’s top photograph collections
+            </h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              quibusdam aliquid odit!
+              quibusdam aliquid odit! Voluptatibus quod aliquid.
             </p>
           </div>
           <div class="post">
             <p class="date">3.11.2011 · PORTRAITS</p>
-            <h3 class="title-text">how to get model look portraits</h3>
+            <h3 class="title-text blog-title">
+              how to get model look portraits
+            </h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              quibusdam aliquid odit!
+              quibusdam aliquid odit! Voluptatibus quod aliquid.
             </p>
           </div>
         </div>
@@ -190,7 +208,7 @@
         />
         <div class="contact-form">
           <div class="contact-form-items">
-            <h2 class="main-title-text">
+            <h2 class="main-title-text main-title-contacts">
               <span class="decor">Co</span>ntact Me
             </h2>
             <p>I would love to get suggestions from you.</p>
@@ -227,10 +245,7 @@
                 ></textarea>
               </div>
             </form>
-            <div>
-              <button class="btn">SEND IT</button>
-            </div>
-            <div class="status"></div>
+            <button class="btn btn-contact-form">SEND IT</button>
           </div>
         </div>
       </div>
@@ -239,38 +254,44 @@
       <div class="container directions-container">
         <div class="directions">
           <h3 class="title-text"><span class="decor">Get In</span> Touch</h3>
-          <div class="contact-info">
+          <p>
             <a href="mailto: contactinfo@alenamiller.com"
               >contactinfo@alenamiller.com</a
             >
-            <a href="tel:355-202-234-0457">(355)-202-234-0457</a>
-          </div>
+          </p>
+          <p><a href="tel:355-202-234-0457">(355)-202-234-0457</a></p>
         </div>
         <div class="directions">
           <h3 class="title-text">
             <span class="decor">Wher</span>e’s my office?
           </h3>
-          <p class="adress">
+          <p style="color: #484b4b">
             2489 Locust Court, Los Angeles 3927 Red Mapie Drive, Los Angeles
           </p>
         </div>
         <div class="directions">
           <h3 class="title-text"><span class="decor">My so</span>cial links</h3>
           <div class="directions-social-media">
+            <a href="https://www.facebook.com"
+              ><iconify-icon icon="ri:facebook-fill"></iconify-icon
+            ></a>
+            <a href="https://twitter.com"
+              ><iconify-icon icon="ri:twitter-fill"></iconify-icon
+            ></a>
             <a href="http://www.pinterest.com"
               ><iconify-icon icon="fe:pinterest"></iconify-icon
             ></a>
             <a href="http://www.instagram.com"
               ><iconify-icon icon="icomoon-free:instagram"></iconify-icon
             ></a>
-            <a href="http://www.kavyar.com"
-              ><img src="img/kavyar.png" class="social-icon"
-            /></a>
+            <a href="https://www.youtube.com"
+              ><iconify-icon icon="uil:youtube"></iconify-icon
+            ></a>
           </div>
         </div>
       </div>
+      <hr style="border-color: #abb1b41c" />
     </section>
-    <hr style="border-color: #abb1b41c" />
     <footer>
       <div class="container">
         <p class="copyright">
