@@ -563,13 +563,13 @@ textarea {
   }
   .about-me {
     flex-direction: column;
-    gap: 0;
+    gap: 10px;
   }
   .main-title-text {
     font-size: 28px;
   }
   .photo-genres-list {
-    gap: 0;
+    gap: 4px;
     justify-content: space-around;
   }
 
@@ -578,10 +578,19 @@ textarea {
   }
   .block_img {
     gap: 3px;
+    grid-template-areas:
+      "box1 box7"
+      "box2 box7"
+      "box2 box7"
+      "box2 box3"
+      "box4 box3"
+      "box4 box6"
+      "box5 box6"
+      "box5 box6";
   }
   .blog-grid {
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 25px;
   }
 
   .contacts {
@@ -592,13 +601,14 @@ textarea {
     flex-direction: column;
   }
   .directions-container {
-    margin: 50px 0;
-    padding: 20px 10px;
+    margin: 40px 0;
+    padding: 20px 25px;
     gap: 10px;
   }
 
   .title-text {
     font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .copyright,
