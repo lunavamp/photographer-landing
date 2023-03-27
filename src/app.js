@@ -1,9 +1,10 @@
-const menuBar = document.querySelector(".menu-bar");
 const headerNav = document.querySelector(".header-nav");
 const menuLinks = document.querySelectorAll(".menu-item");
+const burgerMenu = document.querySelector(".burger-menu");
+const burgerIcon = document.querySelector(".burger-icon");
 
-menuBar.addEventListener("click", () => {
-  menuBar.classList.toggle("_active");
+burgerMenu.addEventListener("click", () => {
+  burgerIcon.classList.toggle("_active");
   headerNav.classList.toggle("_active");
 });
 
